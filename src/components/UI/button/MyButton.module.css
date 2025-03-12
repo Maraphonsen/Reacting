@@ -1,0 +1,30 @@
+.myBtn {
+    background-color: #736be0;
+    /* Красный цвет фона */
+    color: white;
+    /* Белый цвет текста */
+    border: none;
+    /* Убираем границу */
+    padding: 8px 16px;
+    /* Отступы внутри кнопки */
+    border-radius: 4px;
+    /* Скругленные углы */
+    cursor: pointer;
+    /* Курсор в виде указателя */
+    font-size: 14px;
+    /* Размер текста */
+    font-weight: bold;
+    /* Жирный текст */
+    transition: background-color 0.3s ease;
+    /* Плавное изменение цвета при наведении */
+}
+
+.delete-button:hover {
+    background-color: #cc0000;
+    /* Темно-красный цвет при наведении */
+}
+
+.delete-button:active {
+    background-color: #990000;
+    /* Еще более темный красный при нажатии */
+}

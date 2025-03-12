@@ -1,0 +1,27 @@
+input:focus {
+    border-color: #007bff;
+    /* Цвет границы при фокусе */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    /* Тень при фокусе */
+}
+
+input::placeholder {
+    color: #999;
+    /* Цвет текста placeholder */
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    /* Цвет фона для submit */
+    color: white;
+    /* Цвет текста */
+    cursor: pointer;
+    /* Курсор в виде указателя */
+    border: none;
+    /* Убираем границу */
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    /* Цвет фона при наведении */
+}
