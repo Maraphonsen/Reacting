@@ -6,13 +6,15 @@ import { AuthContext } from '../context/Context';
 import Loader from './UI/Loader/Loader';
 
 const AppRouter = () => {
-    const { isAuth, isLoading } = useContext(AuthContext) || {};
+    const { isAuth, isLoading } = useContext(AuthContext);
+
     if (isLoading) {
-        return <Loader/>
+        return <Loader />;
     }
-        return (
-            isAuth
-                ?
+
+    return (
+        isAuth
+            ? (
                 <Routes>
                     {PrivateRoutes.map((route, index) => (
                         <Route
@@ -21,10 +23,11 @@ const AppRouter = () => {
                             element={<route.component />}
                         />
                     ))}
-                    <Route path="/" element={<Navigate to="/about" />} />
+                    <Route path="/" element={<Navigate to="/posts" />} />
                     <Route path="*" element={<Error />} />
                 </Routes>
-                :
+            )
+            : (
                 <Routes>
                     {PublicRoutes.map((route, index) => (
                         <Route
@@ -36,11 +39,9 @@ const AppRouter = () => {
                     <Route path="/" element={<Navigate to="/login" />} />
                     <Route path="*" element={<Error />} />
                 </Routes>
-
-        );
+            )
+    );
 };
 
 export default AppRouter;
-
-
 

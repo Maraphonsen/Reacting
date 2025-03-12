@@ -1,7 +1,7 @@
 import About from "../pages/About";
 import Login from "../pages/Login";
-import Posts from "../pages/Posts";
 import PostIdPage from "../pages/PostIdPage";
+import Posts from "../pages/Posts";
 
 export const PrivateRoutes = [
     { path: '/about', component: About },
@@ -11,5 +11,4 @@ export const PrivateRoutes = [
 
 export const PublicRoutes = [
     { path: '/login', component: Login },
-
-]
+];
